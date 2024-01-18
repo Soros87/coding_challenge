@@ -8,7 +8,7 @@ Specifications:
 
 1. **System Architecture:**
 
-   Define components - (see example diagram below). Client interacts with the smart contract and triggers an event that broadcast the transaction to the distributed ledger which is a **network of multiple nodes.** There are mainly 2 types of nodes.
+Define components - (see example diagram below). Client interacts with the smart contract and triggers an event that broadcast the transaction to the distributed ledger which is a **network of multiple nodes.** There are mainly 2 types of nodes.
 
    1. broadcaster nodes responsible for relaying transactions and storing information of the blockchain
    2. Validating nodes that is responsible for validating transactions and generating new blocks on the Blockchain
@@ -25,7 +25,7 @@ In our application layer, we need to create the following components.
 4. Extracts the value associated with the key "message_type" from the requestData map and asserts its type as a string. Assign to messageType
 5. Extracts the value associated with the key "data" from the requestData map and asserts its type as a string.Assign to transactionData
 6. Next you sign a transaction with messageType and transactionData as arguments and store results to signedTransaction
-7. You access the broadcastManager field of tb (the receiver) and execute the broadcast method.
+7. Access the broadcastManager field of tb (the receiver) and execute the broadcast method.
 
 ```go
 // TransactionBroadcaster handles broadcasting transactions
@@ -148,8 +148,8 @@ func handleResponse(response string) string {
 
 - TransactionStatusTracker struct is a slice where each element is a map with keys strings and value of any type (interface {})
 - logTransaction method of the receiver tst takes the signedTransaction and status as an argument and returns a slice of transactions appending the new transactionInfo object created.
-- define the getTransactionStatuses function that returns the tst.transaction slice
-- the getFailedTransactions function filters the tst.transaction slice for “status” that is equal to “failure” and returns a new slice called failedTransactions.
+- Define the getTransactionStatuses function that returns the tst.transaction slice
+- getFailedTransactions function filters the tst.transaction slice for “status” that is equal to “failure” and returns a new slice called failedTransactions.
 
 ```go
 // TransactionStatusTracker keeps track of the status of each transaction
@@ -193,7 +193,7 @@ To do this, we need to update the BroadcastManager struct to track failedTransac
 
 1. **Update Broadcast method**
 
-Then, update the broadcast method to include a retry method for failed transactions.
+Update the broadcast method to include a retry method for failed transactions.
 
 1. Update b**roadcastTransaction** method to **broadcastWithRetry** method.
 
