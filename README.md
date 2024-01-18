@@ -13,7 +13,7 @@ Specifications:
    1. broadcaster nodes responsible for relaying transactions and storing information of the blockchain
    2. Validating nodes that is responsible for validating transactions and generating new blocks on the Blockchain
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/1fa197a5-27ce-4f9e-8827-47d2efcd1a80/a525ce58-0c39-4cf8-9e58-7bc206edc8af/Untitled.png)
+https://www.notion.so/Switcheo-coding-challenge-Problem-6-721b451ebbf94b2788e911972e2c90c1?pvs=4#52a3c2487ce44ec5b99f5bd9d299a7c4
 
 In our application layer, we need to create the following components.
 
